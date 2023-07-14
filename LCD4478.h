@@ -1,79 +1,79 @@
-//--------------------------------/ Назначение порта /--------------------------------
-#define LCD4478_PORT	PORTD									   // Назначение порта
-#define LCD4478_DDR		DDRD							   // Регистр управления порта
-#define LCD4478_EN      PD0										// Стробирующий сигнал
-#define LCD4478_RW      PD1								 // Данные/Инструкции(команды)
-#define LCD4478_RS      PD2								   // Читать/Записать на экран
-#define LCD4478_DB4     PD4                                      // Старший бит данных
-#define LCD4478_DB5     PD5                                      // Старший бит данных
-#define LCD4478_DB6     PD6                                      // Старший бит данных
-#define LCD4478_DB7     PD7                                      // Старший бит данных
+//--------------------------------/ РќР°Р·РЅР°С‡РµРЅРёРµ РїРѕСЂС‚Р° /--------------------------------
+#define LCD4478_PORT	PORTD									                       // РќР°Р·РЅР°С‡РµРЅРёРµ РїРѕСЂС‚Р°
+#define LCD4478_DDR		DDRD							                   // Р РµРіРёСЃС‚СЂ СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕСЂС‚Р°
+#define LCD4478_EN      PD0										                  // РЎС‚СЂРѕР±РёСЂСѓСЋС‰РёР№ СЃРёРіРЅР°Р»
+#define LCD4478_RW      PD1								               // Р”Р°РЅРЅС‹Рµ/РРЅСЃС‚СЂСѓРєС†РёРё(РєРѕРјР°РЅРґС‹)
+#define LCD4478_RS      PD2								                 // Р§РёС‚Р°С‚СЊ/Р—Р°РїРёСЃР°С‚СЊ РЅР° СЌРєСЂР°РЅ
+#define LCD4478_DB4     PD4                                      // РЎС‚Р°СЂС€РёР№ Р±РёС‚ РґР°РЅРЅС‹С…
+#define LCD4478_DB5     PD5                                      // РЎС‚Р°СЂС€РёР№ Р±РёС‚ РґР°РЅРЅС‹С…
+#define LCD4478_DB6     PD6                                      // РЎС‚Р°СЂС€РёР№ Р±РёС‚ РґР°РЅРЅС‹С…
+#define LCD4478_DB7     PD7                                      // РЎС‚Р°СЂС€РёР№ Р±РёС‚ РґР°РЅРЅС‹С…
 //------------------------------------------------------------------------------------
 #define LCD4478_SETBIT(LCD4478_PORT, LCD4478_OFFSET_BIT)  LCD4478_PORT |= (1<<LCD4478_OFFSET_BIT)
 #define LCD4478_CLRBIT(LCD4478_PORT, LCD4478_OFFSET_BIT)  LCD4478_PORT &= ~(1<<LCD4478_OFFSET_BIT)
 //------------------------------------------------------------------------------------
-#define LCD4478_EN_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_EN)			        //
-#define LCD4478_EN_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_EN)				    //   
-#define LCD4478_RW_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_RW)				    //   
-#define LCD4478_RW_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_RW)				    // 
-#define LCD4478_RS_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_RS)				    //  
-#define LCD4478_RS_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_RS)				    //
+#define LCD4478_EN_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_EN)			                //
+#define LCD4478_EN_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_EN)				              //   
+#define LCD4478_RW_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_RW)				              //   
+#define LCD4478_RW_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_RW)				              // 
+#define LCD4478_RS_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_RS)				              //  
+#define LCD4478_RS_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_RS)				              //
 //------------------------------------------------------------------------------------
-#define LCD4478_DB4_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB4)				    //
-#define LCD4478_DB4_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB4)				    // 
-#define LCD4478_DB5_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB5)				    //
-#define LCD4478_DB5_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB5)				    // 
-#define LCD4478_DB6_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB6)				    //
-#define LCD4478_DB6_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB6)				    //
-#define LCD4478_DB7_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB7)				    //
-#define LCD4478_DB7_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB7)				    //
+#define LCD4478_DB4_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB4)				              //
+#define LCD4478_DB4_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB4)				              // 
+#define LCD4478_DB5_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB5)				              //
+#define LCD4478_DB5_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB5)				              // 
+#define LCD4478_DB6_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB6)				              //
+#define LCD4478_DB6_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB6)				              //
+#define LCD4478_DB7_1	LCD4478_SETBIT(LCD4478_PORT, LCD4478_DB7)				              //
+#define LCD4478_DB7_0	LCD4478_CLRBIT(LCD4478_PORT, LCD4478_DB7)				              //
 //------------------------------------------------------------------------------------
 
-//--------------------------------/ Инструкции /--------------------------------------
-#define LCD4478_InitPinMode		  LCD4478_DDR = 0xFF	     // Инициализация на вывод
-#define LCD4478_CLEARDISPLAY      0x01                               // Очистка экрана
-#define LCD4478_RETURNHOME        0x02         // Вернуться в исходное положение(0x00)
-#define LCD4478_ENTRYMODESET      0x04                              // Установить вход
-#define LCD4478_DISPLAYCONTROL    0x08                           // Установить дисплей
+//--------------------------------/ РРЅСЃС‚СЂСѓРєС†РёРё /--------------------------------------
+#define LCD4478_InitPinMode		  LCD4478_DDR = 0xFF	         // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РЅР° РІС‹РІРѕРґ
+#define LCD4478_CLEARDISPLAY      0x01                               // РћС‡РёСЃС‚РєР° СЌРєСЂР°РЅР°
+#define LCD4478_RETURNHOME        0x02         // Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ(0x00)
+#define LCD4478_ENTRYMODESET      0x04                              // РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІС…РѕРґ
+#define LCD4478_DISPLAYCONTROL    0x08                           // РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РґРёСЃРїР»РµР№
 #define LCD4478_CURSORSHIFT       0x10                                              //
-#define LCD4478_FUNCTIONSET       0x20                           // Установить функцию
+#define LCD4478_FUNCTIONSET       0x20                           // РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С„СѓРЅРєС†РёСЋ
 #define LCD4478_SETCGRAM          0x40                                              //
 #define LCD4478_SETDDRAM          0x80                                              //
 //------------------------------------------------------------------------------------
 
-//--------------------------- Флаги для DISPLAYCONTROL -------------------------------
-#define LCD4478_DISPLAYON         0x04                             // Включить дисплей
-#define LCD4478_DISPLAYOFF        0x00                            // Выключить дисплей
-#define LCD4478_CURSORON          0x02                              // Включить курсор
-#define LCD4478_CURSOROFF         0x00                             // Выключить курсор
-#define LCD4478_BLINKON           0x01                    // Мерцающий курсор включить
-#define LCD4478_BLINKOFF          0x00                   // Мерцающий курсор выключить
+//--------------------------- Р¤Р»Р°РіРё РґР»СЏ DISPLAYCONTROL -------------------------------
+#define LCD4478_DISPLAYON         0x04                             // Р’РєР»СЋС‡РёС‚СЊ РґРёСЃРїР»РµР№
+#define LCD4478_DISPLAYOFF        0x00                            // Р’С‹РєР»СЋС‡РёС‚СЊ РґРёСЃРїР»РµР№
+#define LCD4478_CURSORON          0x02                              // Р’РєР»СЋС‡РёС‚СЊ РєСѓСЂСЃРѕСЂ
+#define LCD4478_CURSOROFF         0x00                             // Р’С‹РєР»СЋС‡РёС‚СЊ РєСѓСЂСЃРѕСЂ
+#define LCD4478_BLINKON           0x01                    // РњРµСЂС†Р°СЋС‰РёР№ РєСѓСЂСЃРѕСЂ РІРєР»СЋС‡РёС‚СЊ
+#define LCD4478_BLINKOFF          0x00                   // РњРµСЂС†Р°СЋС‰РёР№ РєСѓСЂСЃРѕСЂ РІС‹РєР»СЋС‡РёС‚СЊ
 //------------------------------------------------------------------------------------
 
-//--------------------------- Флаги для ENTRYMODESET ---------------------------------
-#define LCD4478_ENTRYDECREMENT    0x00                          // Декрементация входа
-#define LCD4478_ENTRYINCREMENT    0x02                          // Инкрементация входа
-#define LCD4478_ENTRYSHIFTLEFT    0x01                        // Изменение входа влево
-#define LCD4478_ENTRYSHIFTRIGHT   0x00                       // Изменение входа вправо
+//--------------------------- Р¤Р»Р°РіРё РґР»СЏ ENTRYMODESET ---------------------------------
+#define LCD4478_ENTRYDECREMENT    0x00                          // Р”РµРєСЂРµРјРµРЅС‚Р°С†РёСЏ РІС…РѕРґР°
+#define LCD4478_ENTRYINCREMENT    0x02                          // РРЅРєСЂРµРјРµРЅС‚Р°С†РёСЏ РІС…РѕРґР°
+#define LCD4478_ENTRYSHIFTLEFT    0x01                        // РР·РјРµРЅРµРЅРёРµ РІС…РѕРґР° РІР»РµРІРѕ
+#define LCD4478_ENTRYSHIFTRIGHT   0x00                       // РР·РјРµРЅРµРЅРёРµ РІС…РѕРґР° РІРїСЂР°РІРѕ
 //------------------------------------------------------------------------------------
 
-//--------------------------- Флаги для CURSORSHIFT ----------------------------------
+//--------------------------- Р¤Р»Р°РіРё РґР»СЏ CURSORSHIFT ----------------------------------
 #define LCD4478_DISPLAYMOVE       0x08                                              //
 #define LCD4478_CURSORMOVE        0x00                                              //
 #define LCD4478_MOVERIGHT         0x04                                              //
 #define LCD4478_MOVELEFT          0x00                                              //
 //------------------------------------------------------------------------------------
 
-//--------------------------- Флаги для FUNCTIONSET ----------------------------------
-#define LCD4478_4BITMODE          0x03                       // Установка режима 4 бит
-#define LCD4478_2x4BITMODE        0x02            // Установить интерфейс длиной 8 бит
-#define LCD4478_2LINE             0x08                                   // Две строки
-#define LCD4478_1LINE             0x00                                  // Одна строка
-#define LCD4478_5x10DOTS          0x04                       // Отображение 5х10 точек
-#define LCD4478_5x8DOTS           0x00                        // Отображение 5х8 точек
+//--------------------------- Р¤Р»Р°РіРё РґР»СЏ FUNCTIONSET ----------------------------------
+#define LCD4478_4BITMODE          0x03                       // РЈСЃС‚Р°РЅРѕРІРєР° СЂРµР¶РёРјР° 4 Р±РёС‚
+#define LCD4478_2x4BITMODE        0x02            // РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРЅС‚РµСЂС„РµР№СЃ РґР»РёРЅРѕР№ 8 Р±РёС‚
+#define LCD4478_2LINE             0x08                                   // Р”РІРµ СЃС‚СЂРѕРєРё
+#define LCD4478_1LINE             0x00                                  // РћРґРЅР° СЃС‚СЂРѕРєР°
+#define LCD4478_5x10DOTS          0x04                       // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ 5С…10 С‚РѕС‡РµРє
+#define LCD4478_5x8DOTS           0x00                        // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ 5С…8 С‚РѕС‡РµРє
 //------------------------------------------------------------------------------------
 
-//--------------------------- Флаги для SETDDRAM -------------------------------------
+//--------------------------- Р¤Р»Р°РіРё РґР»СЏ SETDDRAM -------------------------------------
 #define LCD4478_DDRAM_1LINE       0x00                                              //
 #define LCD4478_DDRAM_2LINE       0x40                                              //
 //------------------------------------------------------------------------------------
