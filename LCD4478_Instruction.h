@@ -1,7 +1,6 @@
 #ifndef _LCD4478_INSTRUCTION_H_
 #define _LCD4478_INSTRUCTION_H_
 /** Описание команд для дисплея без префикса \c LCD4478:
- * \author latfalx \date 23.11.2024
  *  * MODE_4BIT - Режим работы по 4 битам.
  *  * MODE_TWICE_4BIT - Режим отправки байта, дважды по 4 бита.
  *  * FUNCTION_SET - Установка функций для дисплея.
