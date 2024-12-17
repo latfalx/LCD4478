@@ -25,7 +25,7 @@
 #define CLRBIT(PORT, PIN)  PORT &= ~(1<<PIN)
 
 #define LCD4478_PORT	PORTA   /*  Назначение порта    */
-#define LCD4478_DDR		DDRA    /*  Регистр управления порта    */
+#define LCD4478_DDR	DDRA    /*  Регистр управления порта    */
 #define LCD4478_EN      PA5     /*  Стробирующий сигнал */
 #define LCD4478_RW      PA4		/*  Данные/Инструкции(команды)  */
 #define LCD4478_RS      PA7		/*  Читать/Записать на экран    */
